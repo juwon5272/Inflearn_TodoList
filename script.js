@@ -1,12 +1,14 @@
+const todoInput = document.querySelector("#todo-input");
+
 const keyCodeCheck = function () {
-  if (window.event.keyCode === 13) {
-    const todoList = document.querySelector("#todo-list");
-    const inputValue = document.querySelector("#todo-input").value;
+  if (window.event.keyCode === 13 && todoInput.value !== "") {
+    let todoList = document.querySelector("#todo-list");
     const newLi = document.createElement("li");
     const newSpan = document.createElement("span");
 
-    newSpan.textContent = inputValue;
+    newSpan.textContent = todoInput.value;
     newLi.appendChild(newSpan);
     todoList.appendChild(newLi);
+    inputValue = "";
   }
 };
