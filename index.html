@@ -3,13 +3,16 @@
     <head>
         <title>ToDo</title>
         <link rel="stylesheet" href="./style.css">
-        <script src="./script.js"></script>
+        <script src="./script.js" defer></script>
     </head>
     <body>
         <h1>ToDo</h1>
         <div class="todo-container">
             <input type="text" id="todo-input" onkeydown="keyCodeCheck()"/>
-
+            <ul id="todo-list">
+                <li><span>인사하기</span></li>
+                <li>손흔들기</li>
+            </ul>
         </div>
     </body>
 </html>
